@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <Button 
+	    android:id="@+id/scan"
+	    android:layout_width="180dp"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="100dp"
+	    android:textSize="12sp"
+	    android:text="@string/scan_ap"/>
+    
+    <LinearLayout
+        android:id="@+id/connect_status_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scan"
+        android:layout_marginTop="5dp"       
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/connect_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi_repeater_status" />
+        
+        <TextView
+	        android:id="@+id/wifi_repeater_status"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+   </LinearLayout>
+    
+   <LinearLayout
+        android:id="@+id/ssid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/connect_status_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/ssid_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ssid" />
+        
+        <EditText
+	        android:id="@+id/ssid"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:maxLength="32"
+	        android:singleLine="true"
+	        android:ems="10">
+	        
+	    </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ssid_view"
+        android:layout_marginTop="5dp"      
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password" />
+        
+        <EditText
+	        android:id="@+id/password"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:layout_marginLeft="23dp"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+   <LinearLayout
+        android:id="@+id/ip_address_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"     
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/ip_address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ip_address" />
+        
+        <EditText
+	        android:id="@+id/ip_address"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="15dp"
+	        android:singleLine="true"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/subnet_mask_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ip_address_view"       
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/subnet_mask_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subnet_mask" />
+        
+        <EditText
+	        android:id="@+id/subnet_mask"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/default_gateway_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subnet_mask_view"       
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/default_gateway_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_gateway" />
+        
+        <EditText
+	        android:id="@+id/default_gateway"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/major_dns_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/default_gateway_view"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/major_dns_server_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/major_dns_server" />
+        
+        <EditText
+	        android:id="@+id/major_dns"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="14dp"
+	        android:singleLine="true"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/minor_dns_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/major_dns_view"       
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/minor_dns_server_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minor_dns_server" />
+        
+        <EditText
+	        android:id="@+id/minor_dns"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference 
+        android:key="router_ip"
+        android:title="IP"/>
+    
+    <EditTextPreference 
+        android:key="router_port"
+        android:title="port"/>
+    <Preference 
+        android:key="download_dir"
+        android:title="下载目录" />
+</PreferenceScreen>

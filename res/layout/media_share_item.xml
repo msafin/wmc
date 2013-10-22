@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/item_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="28dp"
+        android:src="@drawable/folder_indicator" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"      
+        android:layout_toRightOf="@+id/item_type"
+        android:layout_toLeftOf="@+id/go"
+        android:layout_centerVertical="true"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="TextView" />
+    
+    <TextView
+        android:id="@+id/item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+       	android:layout_alignLeft="@+id/item_name"
+       	android:layout_below="@+id/item_name"
+       	android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="日期：2013.5.31" />
+    
+    <TextView
+        android:id="@+id/item_len"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+       	android:layout_toRightOf="@+id/item_time"
+       	android:layout_alignTop="@+id/item_time"
+       	android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="大小：2M" />
+        
+    <ImageView
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/go" />
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+   <LinearLayout
+        android:id="@+id/user_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"     
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/user_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name" />
+        
+        <EditText
+	        android:id="@+id/user_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="14dp"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/password_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name_view"       
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_password" />
+        
+        <EditText
+	        android:id="@+id/password"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="27dp"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/confirm_password_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_view"       
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView
+            android:id="@+id/confirm_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_password" />
+        
+        <EditText
+	        android:id="@+id/confirm_password"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:ems="10" >
+	    </EditText>
+    </LinearLayout>
+   <LinearLayout
+        android:id="@+id/operation_mode_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm_password_view"       
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/operation_mode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/operation_mode" />
+        
+        <Spinner
+	        android:id="@+id/operation_mode"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/operation_mode_detail_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/operation_mode_view"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
+        
+        <TextView
+            android:id="@+id/operation_mode__detail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pppoe_keep_alive" />
+
+        <EditText
+            android:id="@+id/operation_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLength="5"
+            android:ems="5" />
+       
+		<TextView
+            android:id="@+id/operation_mode_time_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_unit_second" />
+		
+    </LinearLayout>
+    
+</RelativeLayout>

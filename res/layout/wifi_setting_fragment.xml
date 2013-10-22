@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <TextView 
+        android:id="@+id/current_ssid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="当前名称:"/>
+    
+    <TextView 
+        android:id="@+id/current_ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/current_ssid_text"
+       	android:layout_toRightOf="@+id/current_ssid_text"
+       	android:layout_marginLeft="5dp"
+        android:text=""/>
+    
+    <LinearLayout 
+        android:id="@+id/ap_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_ssid_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+	        android:id="@+id/ap_name_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="名称:" />
+
+	   <EditText
+	        android:id="@+id/ssid"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:ems="12">
+
+	    </EditText>
+    </LinearLayout>
+   
+    <LinearLayout 
+        android:id="@+id/ap_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ap_name"
+        android:layout_alignLeft="@+id/ap_name"
+        android:gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+	    <TextView
+	        android:id="@+id/ap_password_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="密码:" />
+	
+	    <EditText
+	        android:id="@+id/key"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:ems="12"/>
+	</LinearLayout>
+
+    <!--  
+    <LinearLayout 
+        android:id="@+id/auth_type_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ap_password"
+        android:layout_alignLeft="@+id/ap_password"
+        android:gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/auth_type" />
+        <Spinner
+	        android:id="@+id/auth_type"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	</LinearLayout>
+	
+    <LinearLayout 
+        android:id="@+id/enc_type_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/auth_type_container"
+        android:layout_alignLeft="@+id/auth_type_container"
+        android:gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/enc_type" />
+	
+        <Spinner
+	        android:id="@+id/enc_type"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	</LinearLayout>
+	
+   <CheckBox
+	   android:id="@+id/ssid_broadcast"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:layout_alignLeft="@+id/enc_type_container"
+	   android:layout_below="@+id/enc_type_container"
+	   android:layout_marginTop="5dp"
+	   android:text="@string/enable_ssid_broadcast" />
+-->
+    <Button
+        android:id="@+id/commit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ap_password"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/commit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commit"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#333333"
+            android:textColor="#FFFFFF"
+            android:text="客户端列表" />
+
+        <ListView
+            android:id="@+id/wifi_client_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+    </LinearLayout>
+    
+</RelativeLayout>
+
+</ScrollView>

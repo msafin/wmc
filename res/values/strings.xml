@@ -1,0 +1,167 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">WMC</string>
+    <string name="menu_settings">设置</string>
+    <string name="title_activity_main">WMC</string>
+    
+    <!-- 标题 -->
+	<string name="setting_title">设置</string>
+	<string name="about_title">关于</string>
+	
+	
+	<string name="dialog_ok">确定</string>
+	<string name="dialog_cancel">取消</string>
+	<string name="menu_quit">退出</string>
+	
+	<string name="msg_data_failed">获取数据失败</string>
+	<string name="msg_save_failed">保存数据失败</string>
+	<string name="msg_parse_error">数据解析失败</string>
+	<string name="msg_data_success">获取数据成功</string>
+	
+	<string name="loading">正在载入...</string>
+	<string name="load_failed">加载失败</string>
+	<string name="checking_update">检测升级...</string>
+	<string name="check_update_failed">当前已是最新版本</string>
+	<string name="update_note">升级提示</string>
+	<string name="update_now">马上升级</string>
+	<string name="update_later">稍后升级</string>
+	
+	<string name="exit_note">温馨提示</string>
+	<string name="exit_confirm">您确认退出游记视频吗？</string>
+	
+	<string name="back">返回</string>
+	<string name="user_name">用户名:</string>
+	<string name="user_password">密码:</string>
+	<string name="confirm_password">确认密码:</string>
+	<string name="remember_name">记住账号</string>
+	<string name="remember_password">记住密码</string>
+	<string name="login">登陆</string>
+	
+	<string name="status">系统状态</string>
+	<string name="wireless_setting">WIFI设置</string>
+	<string name="network_setting">上网设置</string>
+	<string name="media_share">多媒体共享</string>
+	<string name="advance_setting">高级设置</string>
+	<string name="app_setting">应用设置</string>
+	<string name="functions">功能</string>
+	<string name="internet">因特网</string>
+	<string name="network_type">上网方式:%s</string>
+	<string name="network_status">状态:%s</string>
+	<string name="ap_name">接入点名称:%s</string>
+	<string name="wifi_status">状态:%s</string>
+	<string name="commit">设置</string>
+	
+	<string name="setting_3g">3G拨号设置</string>
+	<string name="network_type_text">网络连接类型</string>
+	<string name="network_pppoe">PPPoE</string>
+	<string name="network_3g">3G</string>
+	<string name="network_dhcp">动态DHCP</string>
+	<string name="network_wifi_repeater">Wifi中继</string>
+	<string name="network_static">静态IP</string>
+	
+	<string name="current_dir">当前目录:%s</string>
+	<string name="reboot_router">重启路由器</string>
+	
+	<string name="setting">正在设置...</string>
+	<string name="get_wifi_info">获取wifi设置...</string>
+	<string name="get_wifi_info_failed">获取wifi设置失败</string>
+	<string name="set_success">设置成功</string>
+	<string name="set_failed">设置失败</string>
+	
+	<string name="get_share_dirs">正在获取共享目录...</string>
+	<string name="get_share_dirs_failed">获取共享目录失败</string>
+	<string name="get_dir_detail">正在获取目录详情...</string>
+	<string name="get_dir_detail_failed">获取目录详情失败</string>
+	
+	<string-array name="sliding_menus">
+	    <item>无线设置</item>
+	    <item>网络设置</item>
+	    <item>多媒体共享</item>
+	    <item>系统</item>
+	</string-array>
+	
+	<string name="ip_address">IP:</string>
+	<string name="subnet_mask">子网掩码:</string>
+	<string name="default_gateway">默认网关:</string>
+	<string name="major_dns_server">主DNS服务器:</string>
+	<string name="minor_dns_server">备用DNS服务器:</string>
+	<string name="operation_mode">运行模式:</string>
+	
+	<string-array name="pppoe_operation_mode">
+	    <item>永久连接</item>
+	    <item>动态连接</item>
+	    <item>手动</item>
+	</string-array>
+	
+	<string name="pppoe_keep_alive">Redial Period</string>
+	<string name="pppoe_on_demand">Idle Time</string>
+	<string name="ssid">接入点名称:</string>
+	<string name="password">连接密码:</string>
+	<string name="scan_ap">扫描接入点</string>
+	<string name="time_unit_second">秒</string>
+	<string name="time_unit_minute">分钟</string>
+	
+	<string name="usb_3g_modem">USB 3G调制解调器:</string>
+	<string name="usb_3g_modem_status">当前状态:</string>
+	<string name="usb_3g_modem_connect">连接</string>
+	<string name="usb_3g_modem_disconnect">断开</string>
+	<string name="usb_3g_modem_dial_mode">拨号方式:</string>
+	<string name="usb_3g_modem_dial_parameters">拨号参数</string>
+	<string name="usb_3g_modem_dial_duration">分钟无流量，则断开连接</string>
+	
+	<string-array name="usb_3g_modem_dial_mode">
+	    <item>永久连接</item>
+	    <item>手动</item>
+	    <item>动态连接(连续5分钟无流量后下载)</item>
+	    <item>动态连接(连续15分钟无流量后下载)</item>
+	    <item>动态连接(自定义空闲下线时间)</item>
+	</string-array>
+	
+	<string name="token">口令:</string>
+	<string name="dial_number">拨号号码:</string>
+	<string name="apn_name">APN:</string>
+	<string name="auth_type">认证方式:</string>
+	<string name="pin_number">PIN码:</string>
+	<string-array name="auth_type_3g">
+	    <item>NO AUTH</item>
+	    <item>CHAP</item>
+	    <item>PAP</item>
+	</string-array>
+	
+	<string name="wifi_repeater_status">连接状态:</string>
+	<string name="get_scan_result">正在获取扫描结果...</string>
+	<string name="get_scan_result_failed">无法获取扫描结果</string>
+	<string name="select_save_direction">请选择保存目录</string>
+	<string name="ok">确定</string>
+	<string name="menu_open_online">在线打开</string>
+	<string name="menu_download">下载</string>
+	<string name="menu_upload">上传</string>
+	
+	<string name="media_share_dir">共享目录</string>
+	<string name="dlna">DLNA</string>
+	
+	<string name="enc_type">加密方式:</string>
+	<string name="enable_ssid_broadcast">开启SSID广播</string>
+
+	<string-array name="auth_type_wifi">
+	    <item>open</item>
+	    <item>wpa-psk/wpa2-psk</item>
+	</string-array>
+	<string-array name="enc_type_wifi">
+	    <item>NONE</item>
+	    <item>AES</item>
+	    <item>TKIP/AES</item>
+	</string-array>
+	
+	<string name="local">本地</string>
+	<string name="remote">远端</string>
+	
+	<string name="memory">内存</string>
+	<string name="memory_total">内存总量</string>
+	<string name="memory_free">可用内存</string>
+	<string name="mac_address">MAC:</string>
+	<string name="ssid">SSID</string>
+	
+	<string name="router_setting">路由器设置</string>
+	<string name="port">端口:</string>
+</resources>

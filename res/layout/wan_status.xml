@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+       android:id="@+id/network_type"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="" />
+    
+	<!-- static -->
+    <TextView
+        android:id="@+id/wan_ip_addr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/wan_subnet_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/wan_default_gateway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/wan_dns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" />
+    
+    <!-- pppoe && 3g-->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/op_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" />
+       
+     <!-- 3g -->
+     <TextView
+        android:id="@+id/type_3g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" />
+     
+     <TextView
+        android:id="@+id/apn_3g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" />
+    
+     <!-- repeater -->
+     <TextView
+       android:id="@+id/sta_ssid"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:visibility="gone"
+       android:text="" />
+     
+     <TextView
+        android:id="@+id/sta_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="" /> 		
+</LinearLayout>
