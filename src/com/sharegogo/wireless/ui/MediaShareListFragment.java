@@ -180,7 +180,7 @@ public class MediaShareListFragment extends JsonRequestFragment implements
 	}
 
 	private void onDownload(MediaShareItem item) {
-		Uri uri = Uri.parse(HttpConstants.HOST + ":" + HttpConstants.PORT + getTag()
+		Uri uri = Uri.parse(HttpConstants.getHost() + ":" + HttpConstants.getPort() + getTag()
 				+ File.separator + item.name);
 		
 		//saveFile(uri.toString(), item.name);
@@ -261,7 +261,7 @@ public class MediaShareListFragment extends JsonRequestFragment implements
 
 		MobclickAgent.onEvent(getActivity(), StatisticHelper.EVENT_PLAY_AUDIO);
 		
-		Uri uri = Uri.parse(HttpConstants.HOST + ":" + HttpConstants.PORT + getTag()
+		Uri uri = Uri.parse(HttpConstants.getHost() + ":" + HttpConstants.getPort() + getTag()
 				+ File.separator + item.name);
 		
 		MediaUtils.playAudio(getActivity(), uri);
@@ -274,7 +274,7 @@ public class MediaShareListFragment extends JsonRequestFragment implements
 
 		MobclickAgent.onEvent(getActivity(), StatisticHelper.EVENT_PLAY_VIDEO);
 		
-		Uri uri = Uri.parse(HttpConstants.HOST + ":" + HttpConstants.PORT + getTag() + File.separator
+		Uri uri = Uri.parse(HttpConstants.getHost() + ":" + HttpConstants.getPort() + getTag() + File.separator
 				+ item.name);
 		
 		MediaUtils.playVideo(getActivity(), uri);
@@ -287,7 +287,7 @@ public class MediaShareListFragment extends JsonRequestFragment implements
 
 		MobclickAgent.onEvent(getActivity(), StatisticHelper.EVENT_VIEM_IMAGE);
 		
-		Uri uri = Uri.parse(HttpConstants.HOST + ":" + HttpConstants.PORT + getTag() + File.separator
+		Uri uri = Uri.parse(HttpConstants.getHost() + ":" + HttpConstants.getPort() + getTag() + File.separator
 				+ item.name);
 		
 		MediaUtils.openImage(getActivity(), uri);
@@ -299,8 +299,8 @@ public class MediaShareListFragment extends JsonRequestFragment implements
 			return;
 		}
 
-		Uri uri = Uri.parse(HttpConstants.HOST
-				+ ":" + HttpConstants.PORT + getTag() + File.separator + item.name);
+		Uri uri = Uri.parse(HttpConstants.getHost()
+				+ ":" + HttpConstants.getPort() + getTag() + File.separator + item.name);
 		
 		MediaUtils.openFile(getActivity(), uri);
 	}

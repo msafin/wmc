@@ -38,7 +38,7 @@ public class WifiManager {
 			ErrorListener errorListener) {
 
 		JsonObjectRequest request = new JsonObjectRequest(Method.GET,
-				HttpConstants.ACTION_GET_WIFI_INFO, (String) null, listener,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_GET_WIFI_INFO), (String) null, listener,
 				errorListener);
 
 		request.setTag("getWifiInfo");
@@ -61,7 +61,7 @@ public class WifiManager {
 		params.add(keyPair);
 
 		JsonObjectRequest request = new JsonObjectRequest(Method.POST,
-				HttpConstants.ACTION_SET_WIFI, URLEncodedUtils.format(params,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_SET_WIFI), URLEncodedUtils.format(params,
 						"utf-8"), listener, errorListener);
 
 		request.setTag("setWifi");
@@ -73,7 +73,7 @@ public class WifiManager {
 	public Request<JSONObject> getScanResult(Listener<JSONObject> listener,
 			ErrorListener errorListener) {
 		JsonObjectRequest request = new JsonObjectRequest(Method.GET,
-				HttpConstants.ACTION_GET_SCAN_RESULT, (String) null, listener,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_GET_SCAN_RESULT), (String) null, listener,
 				errorListener);
 
 		request.setTag("getScanResult");
@@ -85,7 +85,7 @@ public class WifiManager {
 	public Request<JSONObject> getWifiClientList(Listener<JSONObject> listener,
 			ErrorListener errorListener) {
 		JsonObjectRequest request = new JsonObjectRequest(Method.GET,
-				HttpConstants.ACTION_GET_WIFI_CLIENT, (String) null, listener,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_GET_WIFI_CLIENT), (String) null, listener,
 				errorListener);
 
 		request.setTag("getWifiClientList");

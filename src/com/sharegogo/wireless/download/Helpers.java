@@ -107,8 +107,9 @@ public class Helpers {
         String path = Uri.parse(hint).getPath();
         if (new File(path).exists()) {
             Log.d(Constants.TAG, "File already exists: " + path);
-            throw new GenerateSaveFileError(Downloads.Impl.STATUS_FILE_ALREADY_EXISTS_ERROR,
-                    "requested destination file already exists");
+            //throw new GenerateSaveFileError(Downloads.Impl.STATUS_FILE_ALREADY_EXISTS_ERROR,
+            //        "requested destination file already exists");
+            new File(path).delete();
         }
         if (getAvailableBytes(getFilesystemRoot(path)) < contentLength) {
             throw new GenerateSaveFileError(Downloads.Impl.STATUS_INSUFFICIENT_SPACE_ERROR,

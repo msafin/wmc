@@ -7,7 +7,13 @@
     <EditTextPreference 
         android:key="router_port"
         android:title="port"/>
-    <Preference 
+     <EditTextPreference 
+        android:key="user"
+        android:title="用户名" />
+      <EditTextPreference 
+        android:key="password"
+        android:title="密码" />
+     <Preference 
         android:key="download_dir"
         android:title="下载目录" />
 </PreferenceScreen>

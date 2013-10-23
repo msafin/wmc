@@ -44,7 +44,7 @@ public class NetworkManager {
 	public Request<JSONObject> getSystemStatus(Listener<JSONObject> listener, ErrorListener errorListener)
 	{
 		JsonObjectRequest request = new JsonObjectRequest(Method.GET,
-				HttpConstants.ACTION_GET_STATUS, (JSONObject)null, listener,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_GET_STATUS), (JSONObject)null, listener,
 				errorListener);
 
 		request.setTag("getSystemStatus");
@@ -58,7 +58,7 @@ public class NetworkManager {
 		List<NameValuePair> params = buildParams(networkInfo);
 		
 		JsonObjectRequest request = new JsonObjectRequest(Method.POST,
-				HttpConstants.ACTION_SET_NETWORK, URLEncodedUtils.format(params,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_SET_NETWORK), URLEncodedUtils.format(params,
 						"utf-8"), listener, errorListener);
 
 		request.setTag("setNetwork");

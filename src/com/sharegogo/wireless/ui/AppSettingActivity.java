@@ -37,6 +37,8 @@ public class AppSettingActivity extends PreferenceActivity implements
 	private Button mResetBtn;
 	private EditTextPreference mIpPreference;
 	private EditTextPreference mPortPreference;
+	private EditTextPreference mUserPreference;
+	private EditTextPreference mPasswordPreference;
 	private Preference mDownloadDir;
 
 	public static void openAppSettingActivity(Context context) {
@@ -67,6 +69,8 @@ public class AppSettingActivity extends PreferenceActivity implements
 	private void setupPreference() {
 		mIpPreference = (EditTextPreference) findPreference("router_ip");
 		mPortPreference = (EditTextPreference) findPreference("router_port");
+		mUserPreference = (EditTextPreference) findPreference("user");
+		mPasswordPreference = (EditTextPreference) findPreference("password");
 		mDownloadDir = findPreference("download_dir");
 
 		mIpPreference.setOnPreferenceChangeListener(this);
@@ -75,6 +79,8 @@ public class AppSettingActivity extends PreferenceActivity implements
 
 		String ip = SettingManager.getRouterIp();
 		String port = SettingManager.getRouterPort();
+		String user = SettingManager.getUser();
+		String password = SettingManager.getPassword();
 		String downloadDir = SettingManager.getDownloadDir();
 
 		mIpPreference.setSummary(ip);
@@ -83,6 +89,12 @@ public class AppSettingActivity extends PreferenceActivity implements
 		mPortPreference.setSummary(port);
 		mPortPreference.setDefaultValue(HttpConstants.DEFAULT_PORT);
 
+		mUserPreference.setSummary(user);
+		mUserPreference.setDefaultValue(Constants.DEFAULT_USER);
+		
+		mPasswordPreference.setSummary(password);
+		mPasswordPreference.setDefaultValue(Constants.DEFAULT_PASSWORD);
+		
 		mDownloadDir.setSummary(downloadDir);
 		mDownloadDir.setDefaultValue(Constants.DEFAULT_DOWNLOAD_DIR);
 	}
@@ -112,12 +124,6 @@ public class AppSettingActivity extends PreferenceActivity implements
 	public boolean onPreferenceChange(Preference preference, Object newValue) {
 		if (preference == mIpPreference || preference == mPortPreference) {
 			preference.setSummary((String) newValue);
-
-			if (preference == mIpPreference) {
-				HttpConstants.HOST = "http://" + (String) newValue;
-			} else if (preference == mPortPreference) {
-				HttpConstants.PORT = Integer.valueOf((String) newValue);
-			}
 
 			return true;
 		}

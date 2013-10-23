@@ -55,7 +55,7 @@ public class SystemManager {
 		params.add(channel);
 
 		JsonObjectRequest request = new JsonObjectRequest(Method.POST,
-				HttpConstants.ACTION_REGISTER, URLEncodedUtils.format(params,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_REGISTER), URLEncodedUtils.format(params,
 						"utf-8"), listener, errorListener);
 
 		request.setTag("register");
@@ -95,7 +95,7 @@ public class SystemManager {
 			ErrorListener errorListener) {
 
 		JsonObjectRequest request = new JsonObjectRequest(Method.GET,
-				HttpConstants.ACTION_REBOOT, (String) null, listener,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_REBOOT), (String) null, listener,
 				errorListener);
 
 		request.setTag("reboot");

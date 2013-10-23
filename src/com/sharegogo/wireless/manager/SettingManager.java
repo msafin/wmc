@@ -36,4 +36,18 @@ public class SettingManager {
 		
 		sharePreferences.edit().putString("download_dir", dir).commit();
 	}
+	
+	static public String getUser(){
+		Context context = SharegogoWirelessApp.getApplication();
+		SharedPreferences sharePreferences = PreferenceManager.getDefaultSharedPreferences(context);
+		
+		return sharePreferences.getString("user", Constants.DEFAULT_USER);
+	}
+	
+	static public String getPassword(){
+		Context context = SharegogoWirelessApp.getApplication();
+		SharedPreferences sharePreferences = PreferenceManager.getDefaultSharedPreferences(context);
+		
+		return sharePreferences.getString("password", Constants.DEFAULT_PASSWORD);
+	}
 }

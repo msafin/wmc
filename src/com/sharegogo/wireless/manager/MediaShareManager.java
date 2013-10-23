@@ -41,7 +41,7 @@ public class MediaShareManager {
 			ErrorListener errorListener) {
 
 		JsonObjectRequest request = new JsonObjectRequest(Method.GET,
-				HttpConstants.ACTION_GET_SHARE_DIRS, (JSONObject)null, listener,
+				HttpConstants.getActionUrl(HttpConstants.ACTION_GET_SHARE_DIRS), (JSONObject)null, listener,
 				errorListener);
 
 		request.setTag("getShareDirs");
@@ -59,7 +59,7 @@ public class MediaShareManager {
 		params.add(dirPair);
 
 		JsonObjectRequest request = new JsonObjectRequest(Method.GET,
-				HttpConstants.ACTION_LIST_DIR + "?"
+				HttpConstants.getActionUrl(HttpConstants.ACTION_LIST_DIR) + "?"
 						+ URLEncodedUtils.format(params, "utf-8"), (JSONObject)null,
 				listener, errorListener);
 
@@ -72,6 +72,6 @@ public class MediaShareManager {
 
 	public void enableDlna(String dir) {
 		HttpRequest httpRequest = new BasicHttpRequest(HttpPost.METHOD_NAME,
-				HttpConstants.ACTION_ENABLE_DLNA);
+				HttpConstants.getActionUrl(HttpConstants.ACTION_ENABLE_DLNA));
 	}
 }
